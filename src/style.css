@@ -111,6 +111,93 @@ body {
   }
 }
 
+/* Navbar styling */
+.navbar {
+  background: linear-gradient(135deg, #1a237e, #303f9f);
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.2rem 2rem;
+  align-items: center;
+  box-shadow: 0 4px 20px rgba(26, 35, 126, 0.3);
+}
+.navbar h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 8px 16px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+.nav-links a:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-1px);
+}
+
+/* auth styling */
+.auth-container {
+  max-width: 420px;
+  padding: 40px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 20px 40px rgba(49, 130, 206, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.auth-container h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2b6cb0;
+  padding-bottom: 30px;
+}
+.auth-container form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+.auth-container input {
+  padding: 14px 18px;
+  font-size: 1rem;
+  border: 2px solid #e2e8f0;
+  border-radius: 10px;
+  background: white;
+  transition: all 0.3s ease;
+  outline: none;
+}
+.auth-container input:focus {
+  border-color: #3182ce;
+  box-shadow: 0 0 0 3px rgba(49, 130, 206, 0.1);
+}
+.auth-container button {
+  padding: 14px 24px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  background: linear-gradient(135deg, #3182ce, #2b6cb0);
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 20px rgba(49, 130, 206, 0.3);
+}
+.auth-container button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 30px rgba(49, 130, 206, 0.4);
+}
+.auth-container .error {
+  color: #e53e3e;
+  background: #fed7d7;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  font-weight: 500;
+}
+
 @media (max-width: 768px) {
   .features {
     grid-template-columns: 1fr;
