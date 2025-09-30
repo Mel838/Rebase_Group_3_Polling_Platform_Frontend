@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import api from '../services/api';
 import { useNavigate } from 'react-router-dom';
-import Footer from '../components/Footer';
 
 const Register = () => {
   const navigate = useNavigate();
@@ -38,7 +37,6 @@ const Register = () => {
       </form>
       {message && <p style={{ color: 'green' }}>{message}</p>}
       {error && <p style={{ color: 'red' }}>{error}</p>}
-      <Footer />
     </div>
   );
 };

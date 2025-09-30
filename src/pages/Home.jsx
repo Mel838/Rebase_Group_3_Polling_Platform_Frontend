@@ -8,7 +8,7 @@ const Home = () => {
       <section className="view">
         <h1>Welcome to Easypoll</h1>
         <p>Create and share real-time polls in seconds.</p>
-        <Link to="/login">
+        <Link to="/Register">
            <button className="cta-button">Get Started</button>
         </Link> 
       </section>

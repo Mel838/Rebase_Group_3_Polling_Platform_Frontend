@@ -1,26 +1,10 @@
-import { useEffect, useState } from 'react';
-import api from '../services/api';
+import { useContext } from 'react';
+import { AuthContext } from '../contexts/AuthContext.jsx';
 
-const useAuth = () => {
-  const [host, setHost] = useState(null);
-  const [loading, setLoading] = useState(true);
-
-  useEffect(() => {
-    const checkSession = async () => {
-      try {
-        const res = await api.get('/auth/session');
-        setHost(res.data.data.host);
-      } catch (err) {
-        setHost(null);
-      } finally {
-        setLoading(false);
-      }
-    };
-
-    checkSession();
-  }, []);
-
-  return { host, loading };
+export const useAuth = () => {
+  const context = useContext(AuthContext);
+  if (!context) {
+    throw new Error('useAuth must be used within AuthProvider');
+  }
+  return context;
 };
-
-export default useAuth;
